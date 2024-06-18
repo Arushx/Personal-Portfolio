@@ -1,0 +1,170 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Lato', sans-serif;
+}
+
+h1 {
+    color: #802bb1;
+}
+
+.background {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    z-index: 3;
+}
+
+.logo {
+    width: 50px;
+    margin-bottom: 20px;
+}
+
+.nav-icons {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.nav-icon i {
+    font-size: 24px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.nav-icon i:hover {
+    transform: scale(1.1);
+    color: #802bb1;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.contact-icon i {
+    font-size: 20px;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.contact-icon i:hover {
+    transform: scale(1.1);
+    color: #802bb1;
+}
+
+.quote {
+    position: absolute;
+    top: 90%; /* Adjust to position between middle and bottom middle of the face */
+    left: calc(50% + 80px); /* Shift right by the sidebar width + additional space */
+    transform: translate(-50%, -50%);
+    font-family: 'lato' ,'italics';
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    z-index: 2; /* Ensure it's above the face */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.quote:hover {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.intro-header {
+    position: absolute;
+    top: 1%; /* Move further up */
+    left: calc(50% + 80px); /* Shift right by the sidebar width + additional space */
+    transform: translate(-50%, -50%);
+    font-family: 'Lato'; /* Change font family */
+    font-size: 54px; /* Increase size by 50% */
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+.Arush {
+    color: #802bb1;
+    transition: text-shadow 0.3s ease, transform 0.3s ease;
+}
+.Arush:hover {
+    text-shadow: 0 0 10px #9b34d7b3;
+}
+
+.center-face {
+    position: absolute;
+    top: 50%;
+    left: calc(50% + 80px); /* Shift right by the sidebar width + additional space */
+    width: 90%; /* Smaller size */
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s;
+    z-index: 1; /* Ensure face is behind the quote */
+}
+
+.text-body {
+    position: absolute;
+    width: 25%;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    z-index: 1; /* Ensure it's above the face */
+    text-align: center;
+}
+
+.left-text {
+    top: 50%;
+    left: calc(2.5% + 80px); /* Shift right by the sidebar width + additional space */
+    transform: translateY(-65%);
+}
+
+.right-text {
+    top: 50%;
+    right: 2.5%;
+    transform: translateY(-65%);
+}
+
+.resume-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 90%;
+    height: 80%;
+    transform: translate(-50%, -50%);
+    z-index: 4; /* Ensure it's above the background */
+}
+
+.quote, .intro-header, .center-face, .text-body {
+    display: none; /* Hide these elements for debugging */
+}
+
+
